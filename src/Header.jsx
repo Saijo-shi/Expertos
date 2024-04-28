@@ -8,9 +8,7 @@ const Header = () => {
           <Heading size="md">Эксперты</Heading>
         </Box>
         <Spacer />
-        <Box>
-          <ColorModeSwitcher />
-        </Box>
+        <ColorModeSwitcher></ColorModeSwitcher>
       </Flex>
     </Box>
   );

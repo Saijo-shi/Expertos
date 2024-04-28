@@ -1,11 +1,13 @@
-import { UnorderedList, ListItem } from '@chakra-ui/react';
+import { UnorderedList, ListItem, Box } from '@chakra-ui/react';
 
 const Nav = () => {
   return (
-    <UnorderedList>
-      <ListItem>База данных</ListItem>
-      <ListItem>Импорт</ListItem>
+    <Box>
+      <UnorderedList>
+        <ListItem>База данных</ListItem>
+        <ListItem>Импорт</ListItem>
       </UnorderedList>
+    </Box>
   );
 };
 

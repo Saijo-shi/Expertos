@@ -21,34 +21,19 @@ function AddNewCheck() {
     setSize(newSize);
     onOpen();
   };
-  const initialRef = React.useRef(null);
-  const finalRef = React.useRef(null);
- 
+
   return (
     <>
-      
-        <Button
-          onClick={() => handleSizeClick(size)}
-          key={size}
-        >{`Open ${size} Modal`}</Button>
-      
-
-      <Modal
-        initialFocusRef={initialRef}
-        finalFocusRef={finalRef}
-        isOpen={isOpen}
-        onClose={onClose}
-        size={size}
-      >
+      <Button onClick={() => handleSizeClick(size)}>Новая проверка</Button>
+      <Modal isOpen={isOpen} onClose={onClose} size={size}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Данные эксперта</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
             <FormControl>
-              <Input ref={initialRef} placeholder="ФИО" />
+              <Input placeholder="ФИО" />
             </FormControl>
-
             <FormControl mt={4}>
               <Input placeholder="Дата рождения" />
             </FormControl>
@@ -74,7 +59,6 @@ function AddNewCheck() {
               <Textarea placeholder="Доп. информация" />
             </FormControl>
           </ModalBody>
-
           <ModalFooter>
             <Button colorScheme="blue" mr={3}>
               Сохранить
